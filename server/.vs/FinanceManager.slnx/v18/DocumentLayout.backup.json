@@ -1,0 +1,872 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|InfraStructure\\InfraStructure.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\infrastructure\\repository\\expenserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|InfraStructure\\InfraStructure.csproj|solutionrelative:infrastructure\\repository\\expenserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\api\\controllers\\expensecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\controllers\\expensecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\application\\features\\services\\expenseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\features\\services\\expenseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\domain\\entity\\expenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|solutionrelative:domain\\entity\\expenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\application\\features\\response\\expensedashboarddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\features\\response\\expensedashboarddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\application\\features\\request\\expensedashboardrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\features\\request\\expensedashboardrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\domain\\enums\\paymenttypeenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|solutionrelative:domain\\enums\\paymenttypeenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|InfraStructure\\InfraStructure.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\infrastructure\\persistence\\migrations\\20260418201340_paymenttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|InfraStructure\\InfraStructure.csproj|solutionrelative:infrastructure\\persistence\\migrations\\20260418201340_paymenttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\application\\interfaces\\persistence\\repository\\iexpenserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\interfaces\\persistence\\repository\\iexpenserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\application\\features\\request\\expensedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\features\\request\\expensedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|InfraStructure\\InfraStructure.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\infrastructure\\persistence\\context\\appdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|InfraStructure\\InfraStructure.csproj|solutionrelative:infrastructure\\persistence\\context\\appdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|InfraStructure\\InfraStructure.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\infrastructure\\persistence\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|InfraStructure\\InfraStructure.csproj|solutionrelative:infrastructure\\persistence\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\application\\features\\response\\expensestats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\features\\response\\expensestats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\application\\features\\intefaces\\iexpenseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\features\\intefaces\\iexpenseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|InfraStructure\\InfraStructure.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\infrastructure\\persistence\\migrations\\20260418184104_addexpensestatsfunction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|InfraStructure\\InfraStructure.csproj|solutionrelative:infrastructure\\persistence\\migrations\\20260418184104_addexpensestatsfunction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|InfraStructure\\InfraStructure.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\infrastructure\\infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|InfraStructure\\InfraStructure.csproj|solutionrelative:infrastructure\\infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|InfraStructure\\InfraStructure.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\infrastructure\\persistence\\configurations\\expensetagmappingconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|InfraStructure\\InfraStructure.csproj|solutionrelative:infrastructure\\persistence\\configurations\\expensetagmappingconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|InfraStructure\\InfraStructure.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\infrastructure\\persistence\\configurations\\expenseconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|InfraStructure\\InfraStructure.csproj|solutionrelative:infrastructure\\persistence\\configurations\\expenseconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|InfraStructure\\InfraStructure.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\infrastructure\\repository\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|InfraStructure\\InfraStructure.csproj|solutionrelative:infrastructure\\repository\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|InfraStructure\\InfraStructure.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\infrastructure\\persistence\\configurations\\baseconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|InfraStructure\\InfraStructure.csproj|solutionrelative:infrastructure\\persistence\\configurations\\baseconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|InfraStructure\\InfraStructure.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\infrastructure\\dependencyinjections.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|InfraStructure\\InfraStructure.csproj|solutionrelative:infrastructure\\dependencyinjections.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\api\\extensions\\resultextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\extensions\\resultextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\api\\middlewares\\globalexceptionmiddlewares.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\middlewares\\globalexceptionmiddlewares.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\api\\extensions\\fluentvalidatorfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\extensions\\fluentvalidatorfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\application\\features\\response\\displayexpense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\features\\response\\displayexpense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\application\\common\\pagerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\common\\pagerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\application\\common\\pagedresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\common\\pagedresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\api\\extensions\\corsextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\extensions\\corsextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\application\\enums\\errorstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\enums\\errorstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\application\\interfaces\\persistence\\repository\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\interfaces\\persistence\\repository\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|InfraStructure\\InfraStructure.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\infrastructure\\repository\\tagrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|InfraStructure\\InfraStructure.csproj|solutionrelative:infrastructure\\repository\\tagrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\domain\\entity\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|solutionrelative:domain\\entity\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\domain\\entity\\tags.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|solutionrelative:domain\\entity\\tags.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\application\\dependencyinjections.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\dependencyinjections.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|InfraStructure\\InfraStructure.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\infrastructure\\persistence\\configurations\\userconfigurations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|InfraStructure\\InfraStructure.csproj|solutionrelative:infrastructure\\persistence\\configurations\\userconfigurations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\domain\\entity\\expensetagmapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|solutionrelative:domain\\entity\\expensetagmapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|InfraStructure\\InfraStructure.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\infrastructure\\persistence\\configurations\\tagconfigurations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|InfraStructure\\InfraStructure.csproj|solutionrelative:infrastructure\\persistence\\configurations\\tagconfigurations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\application\\interfaces\\persistence\\repository\\itagrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\interfaces\\persistence\\repository\\itagrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\application\\features\\validation\\expenseaddvalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\features\\validation\\expenseaddvalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\application\\common\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\common\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\application\\common\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\common\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\application\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|InfraStructure\\InfraStructure.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\infrastructure\\extensions\\ratelimitter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|InfraStructure\\InfraStructure.csproj|solutionrelative:infrastructure\\extensions\\ratelimitter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|InfraStructure\\InfraStructure.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\infrastructure\\persistence\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|InfraStructure\\InfraStructure.csproj|solutionrelative:infrastructure\\persistence\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\domain\\enums\\categoryenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|solutionrelative:domain\\enums\\categoryenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\users\\tlokh\\source\\repos\\financemanager\\domain\\entity\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|solutionrelative:domain\\entity\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tlokh\\source\\repos\\FinanceManager\\FinanceManager\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:FinanceManager\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ExpenseController.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\API\\Controllers\\ExpenseController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\ExpenseController.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\API\\Controllers\\ExpenseController.cs",
+              "RelativeToolTip": "API\\Controllers\\ExpenseController.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAUwC4AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-12T15:14:22.063Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ExpenseService.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Application\\Features\\Services\\ExpenseService.cs",
+              "RelativeDocumentMoniker": "Application\\Features\\Services\\ExpenseService.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Application\\Features\\Services\\ExpenseService.cs",
+              "RelativeToolTip": "Application\\Features\\Services\\ExpenseService.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAkwFsAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-12T15:09:46.476Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ExpenseDashboardRequest.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Application\\Features\\Request\\ExpenseDashboardRequest.cs",
+              "RelativeDocumentMoniker": "Application\\Features\\Request\\ExpenseDashboardRequest.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Application\\Features\\Request\\ExpenseDashboardRequest.cs",
+              "RelativeToolTip": "Application\\Features\\Request\\ExpenseDashboardRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-12T15:57:37.157Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ExpenseDashboardDto.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Application\\Features\\Response\\ExpenseDashboardDto.cs",
+              "RelativeDocumentMoniker": "Application\\Features\\Response\\ExpenseDashboardDto.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Application\\Features\\Response\\ExpenseDashboardDto.cs",
+              "RelativeToolTip": "Application\\Features\\Response\\ExpenseDashboardDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBAAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-12T16:05:30.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ExpenseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\InfraStructure\\Repository\\ExpenseRepository.cs",
+              "RelativeDocumentMoniker": "InfraStructure\\Repository\\ExpenseRepository.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\InfraStructure\\Repository\\ExpenseRepository.cs",
+              "RelativeToolTip": "InfraStructure\\Repository\\ExpenseRepository.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAgwBgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-12T15:55:03.556Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Expenses.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Domain\\Entity\\Expenses.cs",
+              "RelativeDocumentMoniker": "Domain\\Entity\\Expenses.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Domain\\Entity\\Expenses.cs",
+              "RelativeToolTip": "Domain\\Entity\\Expenses.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAlwCMAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T11:52:29.072Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PaymentTypeEnum.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Domain\\Enums\\PaymentTypeEnum.cs",
+              "RelativeDocumentMoniker": "Domain\\Enums\\PaymentTypeEnum.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Domain\\Enums\\PaymentTypeEnum.cs",
+              "RelativeToolTip": "Domain\\Enums\\PaymentTypeEnum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-18T20:09:08.853Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IExpenseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Application\\Interfaces\\Persistence\\Repository\\IExpenseRepository.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\Persistence\\Repository\\IExpenseRepository.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Application\\Interfaces\\Persistence\\Repository\\IExpenseRepository.cs",
+              "RelativeToolTip": "Application\\Interfaces\\Persistence\\Repository\\IExpenseRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-12T16:10:10.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ExpenseDto.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Application\\Features\\Request\\ExpenseDto.cs",
+              "RelativeDocumentMoniker": "Application\\Features\\Request\\ExpenseDto.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Application\\Features\\Request\\ExpenseDto.cs",
+              "RelativeToolTip": "Application\\Features\\Request\\ExpenseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T14:26:46.345Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "20260418201340_PaymentType.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\InfraStructure\\Persistence\\Migrations\\20260418201340_PaymentType.cs",
+              "RelativeDocumentMoniker": "InfraStructure\\Persistence\\Migrations\\20260418201340_PaymentType.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\InfraStructure\\Persistence\\Migrations\\20260418201340_PaymentType.cs",
+              "RelativeToolTip": "InfraStructure\\Persistence\\Migrations\\20260418201340_PaymentType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-18T20:13:44.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AppDbContextFactory.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\InfraStructure\\Persistence\\Context\\AppDbContextFactory.cs",
+              "RelativeDocumentMoniker": "InfraStructure\\Persistence\\Context\\AppDbContextFactory.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\InfraStructure\\Persistence\\Context\\AppDbContextFactory.cs",
+              "RelativeToolTip": "InfraStructure\\Persistence\\Context\\AppDbContextFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T12:21:04.968Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\InfraStructure\\Persistence\\Context\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "InfraStructure\\Persistence\\Context\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\InfraStructure\\Persistence\\Context\\AppDbContext.cs",
+              "RelativeToolTip": "InfraStructure\\Persistence\\Context\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T12:07:04.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ExpenseStats.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Application\\Features\\Response\\ExpenseStats.cs",
+              "RelativeDocumentMoniker": "Application\\Features\\Response\\ExpenseStats.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Application\\Features\\Response\\ExpenseStats.cs",
+              "RelativeToolTip": "Application\\Features\\Response\\ExpenseStats.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBAAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-18T18:32:31.616Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IExpenseService.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Application\\Features\\Intefaces\\IExpenseService.cs",
+              "RelativeDocumentMoniker": "Application\\Features\\Intefaces\\IExpenseService.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Application\\Features\\Intefaces\\IExpenseService.cs",
+              "RelativeToolTip": "Application\\Features\\Intefaces\\IExpenseService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-12T15:09:54.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "20260418184104_AddExpenseStatsFunction.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\InfraStructure\\Persistence\\Migrations\\20260418184104_AddExpenseStatsFunction.cs",
+              "RelativeDocumentMoniker": "InfraStructure\\Persistence\\Migrations\\20260418184104_AddExpenseStatsFunction.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\InfraStructure\\Persistence\\Migrations\\20260418184104_AddExpenseStatsFunction.cs",
+              "RelativeToolTip": "InfraStructure\\Persistence\\Migrations\\20260418184104_AddExpenseStatsFunction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-18T18:44:39.666Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "InfraStructure",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\InfraStructure\\InfraStructure.csproj",
+              "RelativeDocumentMoniker": "InfraStructure\\InfraStructure.csproj",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\InfraStructure\\InfraStructure.csproj",
+              "RelativeToolTip": "InfraStructure\\InfraStructure.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-04-18T18:49:49.198Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "BaseConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\InfraStructure\\Persistence\\Configurations\\BaseConfiguration.cs",
+              "RelativeDocumentMoniker": "InfraStructure\\Persistence\\Configurations\\BaseConfiguration.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\InfraStructure\\Persistence\\Configurations\\BaseConfiguration.cs",
+              "RelativeToolTip": "InfraStructure\\Persistence\\Configurations\\BaseConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T12:15:14.719Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ExpenseTagMappingConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\InfraStructure\\Persistence\\Configurations\\ExpenseTagMappingConfiguration.cs",
+              "RelativeDocumentMoniker": "InfraStructure\\Persistence\\Configurations\\ExpenseTagMappingConfiguration.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\InfraStructure\\Persistence\\Configurations\\ExpenseTagMappingConfiguration.cs",
+              "RelativeToolTip": "InfraStructure\\Persistence\\Configurations\\ExpenseTagMappingConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-12T15:25:05.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ExpenseConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\InfraStructure\\Persistence\\Configurations\\ExpenseConfiguration.cs",
+              "RelativeDocumentMoniker": "InfraStructure\\Persistence\\Configurations\\ExpenseConfiguration.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\InfraStructure\\Persistence\\Configurations\\ExpenseConfiguration.cs",
+              "RelativeToolTip": "InfraStructure\\Persistence\\Configurations\\ExpenseConfiguration.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-12T15:22:03.503Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\InfraStructure\\Repository\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "InfraStructure\\Repository\\GenericRepository.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\InfraStructure\\Repository\\GenericRepository.cs",
+              "RelativeToolTip": "InfraStructure\\Repository\\GenericRepository.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAswC8AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T12:05:15.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ResultExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\API\\Extensions\\ResultExtensions.cs",
+              "RelativeDocumentMoniker": "API\\Extensions\\ResultExtensions.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\API\\Extensions\\ResultExtensions.cs",
+              "RelativeToolTip": "API\\Extensions\\ResultExtensions.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAYwAgAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T14:03:37.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "DependencyInjections.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\InfraStructure\\DependencyInjections.cs",
+              "RelativeDocumentMoniker": "InfraStructure\\DependencyInjections.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\InfraStructure\\DependencyInjections.cs",
+              "RelativeToolTip": "InfraStructure\\DependencyInjections.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAA9wCAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T11:48:40.456Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "GlobalExceptionMiddlewares.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\API\\Middlewares\\GlobalExceptionMiddlewares.cs",
+              "RelativeDocumentMoniker": "API\\Middlewares\\GlobalExceptionMiddlewares.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\API\\Middlewares\\GlobalExceptionMiddlewares.cs",
+              "RelativeToolTip": "API\\Middlewares\\GlobalExceptionMiddlewares.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwB4AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T14:34:15.898Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "FluentValidatorFilter.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\API\\Extensions\\FluentValidatorFilter.cs",
+              "RelativeDocumentMoniker": "API\\Extensions\\FluentValidatorFilter.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\API\\Extensions\\FluentValidatorFilter.cs",
+              "RelativeToolTip": "API\\Extensions\\FluentValidatorFilter.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAowBQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T14:12:50.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "DisplayExpense.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Application\\Features\\Response\\DisplayExpense.cs",
+              "RelativeDocumentMoniker": "Application\\Features\\Response\\DisplayExpense.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Application\\Features\\Response\\DisplayExpense.cs",
+              "RelativeToolTip": "Application\\Features\\Response\\DisplayExpense.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-18T07:17:37.12Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "PagedResult.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Application\\Common\\PagedResult.cs",
+              "RelativeDocumentMoniker": "Application\\Common\\PagedResult.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Application\\Common\\PagedResult.cs",
+              "RelativeToolTip": "Application\\Common\\PagedResult.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-12T16:03:09.988Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\API\\Program.cs",
+              "RelativeDocumentMoniker": "API\\Program.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\API\\Program.cs",
+              "RelativeToolTip": "API\\Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAIwC0AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T12:28:19.355Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\API\\appsettings.json",
+              "RelativeDocumentMoniker": "API\\appsettings.json",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\API\\appsettings.json",
+              "RelativeToolTip": "API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-10T14:58:12.565Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "CorsExtension.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\API\\Extensions\\CorsExtension.cs",
+              "RelativeDocumentMoniker": "API\\Extensions\\CorsExtension.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\API\\Extensions\\CorsExtension.cs",
+              "RelativeToolTip": "API\\Extensions\\CorsExtension.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T14:29:51.556Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "PageRequest.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Application\\Common\\PageRequest.cs",
+              "RelativeDocumentMoniker": "Application\\Common\\PageRequest.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Application\\Common\\PageRequest.cs",
+              "RelativeToolTip": "Application\\Common\\PageRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-12T15:55:48.823Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ErrorStatus.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Application\\Enums\\ErrorStatus.cs",
+              "RelativeDocumentMoniker": "Application\\Enums\\ErrorStatus.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Application\\Enums\\ErrorStatus.cs",
+              "RelativeToolTip": "Application\\Enums\\ErrorStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T13:54:00.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "TagRepository.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\InfraStructure\\Repository\\TagRepository.cs",
+              "RelativeDocumentMoniker": "InfraStructure\\Repository\\TagRepository.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\InfraStructure\\Repository\\TagRepository.cs",
+              "RelativeToolTip": "InfraStructure\\Repository\\TagRepository.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowDkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-12T15:02:28.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "IGenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Application\\Interfaces\\Persistence\\Repository\\IGenericRepository.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\Persistence\\Repository\\IGenericRepository.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Application\\Interfaces\\Persistence\\Repository\\IGenericRepository.cs",
+              "RelativeToolTip": "Application\\Interfaces\\Persistence\\Repository\\IGenericRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T12:11:38.591Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Domain\\Entity\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "Domain\\Entity\\BaseEntity.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Domain\\Entity\\BaseEntity.cs",
+              "RelativeToolTip": "Domain\\Entity\\BaseEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T11:52:35.812Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Tags.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Domain\\Entity\\Tags.cs",
+              "RelativeDocumentMoniker": "Domain\\Entity\\Tags.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Domain\\Entity\\Tags.cs",
+              "RelativeToolTip": "Domain\\Entity\\Tags.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T11:53:20.351Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "DependencyInjections.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Application\\DependencyInjections.cs",
+              "RelativeDocumentMoniker": "Application\\DependencyInjections.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Application\\DependencyInjections.cs",
+              "RelativeToolTip": "Application\\DependencyInjections.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBJwBYAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T11:48:14.292Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "ExpenseTagMapping.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Domain\\Entity\\ExpenseTagMapping.cs",
+              "RelativeDocumentMoniker": "Domain\\Entity\\ExpenseTagMapping.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Domain\\Entity\\ExpenseTagMapping.cs",
+              "RelativeToolTip": "Domain\\Entity\\ExpenseTagMapping.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAhwA8AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T11:53:51.164Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "UserConfigurations.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\InfraStructure\\Persistence\\Configurations\\UserConfigurations.cs",
+              "RelativeDocumentMoniker": "InfraStructure\\Persistence\\Configurations\\UserConfigurations.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\InfraStructure\\Persistence\\Configurations\\UserConfigurations.cs",
+              "RelativeToolTip": "InfraStructure\\Persistence\\Configurations\\UserConfigurations.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-12T15:25:23.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "TagConfigurations.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\InfraStructure\\Persistence\\Configurations\\TagConfigurations.cs",
+              "RelativeDocumentMoniker": "InfraStructure\\Persistence\\Configurations\\TagConfigurations.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\InfraStructure\\Persistence\\Configurations\\TagConfigurations.cs",
+              "RelativeToolTip": "InfraStructure\\Persistence\\Configurations\\TagConfigurations.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-12T15:25:13.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "ITagRepository.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Application\\Interfaces\\Persistence\\Repository\\ITagRepository.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\Persistence\\Repository\\ITagRepository.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Application\\Interfaces\\Persistence\\Repository\\ITagRepository.cs",
+              "RelativeToolTip": "Application\\Interfaces\\Persistence\\Repository\\ITagRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-12T15:03:28.773Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\API\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "API\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\API\\Properties\\launchSettings.json",
+              "RelativeToolTip": "API\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAUAAAAAAAAAAABRwB8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-10T14:58:15.355Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "ExpenseAddValidation.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Application\\Features\\Validation\\ExpenseAddValidation.cs",
+              "RelativeDocumentMoniker": "Application\\Features\\Validation\\ExpenseAddValidation.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Application\\Features\\Validation\\ExpenseAddValidation.cs",
+              "RelativeToolTip": "Application\\Features\\Validation\\ExpenseAddValidation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T14:26:21.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "ApiResponse.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Application\\Common\\ApiResponse.cs",
+              "RelativeDocumentMoniker": "Application\\Common\\ApiResponse.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Application\\Common\\ApiResponse.cs",
+              "RelativeToolTip": "Application\\Common\\ApiResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T12:38:07.887Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "Result.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Application\\Common\\Result.cs",
+              "RelativeDocumentMoniker": "Application\\Common\\Result.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Application\\Common\\Result.cs",
+              "RelativeToolTip": "Application\\Common\\Result.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T12:37:45.92Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Application\\Interfaces\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IUnitOfWork.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Application\\Interfaces\\IUnitOfWork.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IUnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T12:10:00.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "RateLimitter.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\InfraStructure\\Extensions\\RateLimitter.cs",
+              "RelativeDocumentMoniker": "InfraStructure\\Extensions\\RateLimitter.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\InfraStructure\\Extensions\\RateLimitter.cs",
+              "RelativeToolTip": "InfraStructure\\Extensions\\RateLimitter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T12:16:11.025Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\InfraStructure\\Persistence\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "InfraStructure\\Persistence\\UnitOfWork.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\InfraStructure\\Persistence\\UnitOfWork.cs",
+              "RelativeToolTip": "InfraStructure\\Persistence\\UnitOfWork.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T12:06:19.299Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "CategoryEnum.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Domain\\Enums\\CategoryEnum.cs",
+              "RelativeDocumentMoniker": "Domain\\Enums\\CategoryEnum.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Domain\\Enums\\CategoryEnum.cs",
+              "RelativeToolTip": "Domain\\Enums\\CategoryEnum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T11:58:51.964Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "Users.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Domain\\Entity\\Users.cs",
+              "RelativeDocumentMoniker": "Domain\\Entity\\Users.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\Domain\\Entity\\Users.cs",
+              "RelativeToolTip": "Domain\\Entity\\Users.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAwAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T11:53:06.792Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\FinanceManager\\Program.cs",
+              "RelativeDocumentMoniker": "FinanceManager\\Program.cs",
+              "ToolTip": "C:\\Users\\tlokh\\source\\repos\\FinanceManager\\FinanceManager\\Program.cs",
+              "RelativeToolTip": "FinanceManager\\Program.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T11:48:18.911Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
