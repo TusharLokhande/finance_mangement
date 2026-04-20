@@ -1,0 +1,99 @@
+# =========================
+# .NET / Visual Studio
+# =========================
+
+.vs
+bin/
+obj/
+out/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# VS Code / Rider
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# =========================
+# Build & publish
+# =========================
+
+publish/
+wwwroot/dist/
+wwwroot/build/
+
+# =========================
+# NuGet
+# =========================
+
+*.nupkg
+packages/
+.nuget/
+
+# =========================
+# Entity Framework
+# =========================
+
+Migrations/*Designer.cs
+Migrations/*.resx
+
+# (keep migrations, ignore generated stuff only)
+
+# =========================
+# Secrets / config
+# =========================
+
+appsettings.Development.json
+appsettings.Local.json
+.env
+.env.*
+
+# =========================
+# Node / React (Vite)
+# =========================
+
+node_modules/
+dist/
+build/
+.vite/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =========================
+# TypeScript
+# =========================
+
+*.tsbuildinfo
+
+# =========================
+# Coverage
+# =========================
+
+coverage/
+*.coverage
+*.coveragexml
+
+# =========================
+# Docker (optional)
+# =========================
+
+docker-compose.override.yml
+
+# =========================
+# Misc
+# =========================
+
+*.cache
+*.tmp

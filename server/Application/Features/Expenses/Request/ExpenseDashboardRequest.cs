@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Application.Features.Request
+namespace Application.Features.Expenses.Request
 {
         public class ExpenseDashboardRequest: PageRequest
         {

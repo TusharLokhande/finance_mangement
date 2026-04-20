@@ -1,12 +1,16 @@
-﻿using Application.Features.Request;
-using Application.Features.Response;
+﻿using Application.Features.Expenses.Response;
+using Application.Interfaces.Services;
 using Domain.Entity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 
 namespace InfraStructure.Persistence.Context
 {
     public class AppDbContext : DbContext
     {
+
+
+
         public AppDbContext(DbContextOptions<AppDbContext> options)
             : base(options)
         {

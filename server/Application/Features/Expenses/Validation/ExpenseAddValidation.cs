@@ -1,10 +1,9 @@
-﻿using Application.Features.Request;
-using FluentValidation;
+﻿using FluentValidation;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Application.Features.Validation
+namespace Application.Features.Expenses.Validation
 {
     //internal class ExpenseAddValidation: IValidator<ExpenseAddDto>
     //{

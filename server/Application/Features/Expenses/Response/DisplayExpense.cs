@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Application.Features.Response
+namespace Application.Features.Expenses.Response
 {
     public record DisplayExpense
     {

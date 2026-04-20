@@ -1,6 +1,7 @@
 ﻿using API.Extensions;
-using Application.Features.Intefaces;
-using Application.Features.Request;
+using Application.Features.Expenses.Intefaces;
+using Application.Features.Expenses.Request;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,6 +9,7 @@ namespace API.Controllers
 {
     [Route("api/expense")]
     [ApiController]
+    [Authorize]
     public class ExpenseController : ControllerBase
     {
         private readonly IExpenseService _ExpenseService;

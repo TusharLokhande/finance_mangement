@@ -6,8 +6,9 @@ namespace Domain.Entity
 {
     public class Users: BaseEntity
     {
-        public string Name { get; set; }    
 
-        public string EmailId { get; set; }
+        public string Name { get; set; }    
+        public string Email { get; set; }
+        public string AzureOid { get; set; }
     }
 }

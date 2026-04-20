@@ -1,2 +1,109 @@
 .env
 db
+# ==========================================
+# .NET / C# (Server)
+# ==========================================
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.vs/
+.vs/
+*.ncrunch*
+_NCrunch_*
+*.DotSettings.user
+
+# Build output
+out/
+publish/
+artifacts/
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+project.lock.json
+project.fragment.lock.json
+
+# Test results
+TestResults/
+coverage/
+*.coveragexml
+*.trx
+
+# ==========================================
+# Node.js / Frontend (Client)
+# ==========================================
+node_modules/
+dist/
+build/
+.next/
+.nuxt/
+.cache/
+.parcel-cache/
+.turbo/
+
+# Vite / bundler
+*.local
+vite.config.*.timestamp*
+
+# ==========================================
+# Environment & Secrets
+# ==========================================
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+secrets.json
+appsettings.Development.json
+
+# ==========================================
+# Docker
+# ==========================================
+.dockerignore
+docker-compose.override.yml
+
+# ==========================================
+# Database
+# ==========================================
+*.db
+*.sqlite
+*.sqlite3
+*.mdf
+*.ldf
+*.ndf
+db/data/
+db/backups/
+
+# ==========================================
+# Logs & Temp
+# ==========================================
+logs/
+*.log
+npm-debug.log*
+yarn-error.log*
+*.tmp
+*.temp
+tmp/
+temp/
+
+# ==========================================
+# OS & Editor
+# ==========================================
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+*.swp
+*.swo
+
+# ==========================================
+# Rider / JetBrains
+# ==========================================
+.idea/
+*.sln.iml

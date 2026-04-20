@@ -36,3 +36,4 @@ C:\Users\tlokh\Desktop\PROJECTS\expense_tracker\server\InfraStructure\obj\Debug\
 C:\Users\tlokh\Desktop\PROJECTS\expense_tracker\server\InfraStructure\obj\Debug\net10.0\InfraStructure.pdb
 C:\Users\tlokh\Desktop\PROJECTS\expense_tracker\server\InfraStructure\obj\Debug\net10.0\InfraStructure.genruntimeconfig.cache
 C:\Users\tlokh\Desktop\PROJECTS\expense_tracker\server\InfraStructure\obj\Debug\net10.0\ref\InfraStructure.dll
+C:\Users\tlokh\Desktop\PROJECTS\expense_tracker\server\InfraStructure\obj\Debug\net10.0\InfraStructure.sourcelink.json

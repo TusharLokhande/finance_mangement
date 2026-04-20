@@ -28,3 +28,4 @@ C:\Users\tlokh\Desktop\PROJECTS\expense_tracker\server\Application\obj\Debug\net
 C:\Users\tlokh\Desktop\PROJECTS\expense_tracker\server\Application\obj\Debug\net10.0\refint\Application.dll
 C:\Users\tlokh\Desktop\PROJECTS\expense_tracker\server\Application\obj\Debug\net10.0\Application.pdb
 C:\Users\tlokh\Desktop\PROJECTS\expense_tracker\server\Application\obj\Debug\net10.0\ref\Application.dll
+C:\Users\tlokh\Desktop\PROJECTS\expense_tracker\server\Application\obj\Debug\net10.0\Application.sourcelink.json

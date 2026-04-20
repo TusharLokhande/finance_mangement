@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Text.Json.Serialization;
 
-namespace Application.Features.Response
+namespace Application.Features.Expenses.Response
 {
     public class ExpenseStatsDtoRaw
     {

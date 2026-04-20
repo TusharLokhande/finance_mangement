@@ -1,9 +1,11 @@
 ﻿using Application.Interfaces;
 using Application.Interfaces.Persistence.Repository;
+using Application.Interfaces.Services;
 using InfraStructure.Extensions;
 using InfraStructure.Persistence;
 using InfraStructure.Persistence.Context;
 using InfraStructure.Repository;
+using InfraStructure.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -34,6 +36,7 @@ namespace InfraStructure
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddScoped<IExpenseRepository, ExpenseRepository>();
             services.AddScoped<ITagRepository, TagRepository>();
+            services.AddScoped<ICurrentUserService, CurrentUserService>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             return services;
         }

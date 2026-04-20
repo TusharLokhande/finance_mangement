@@ -1,11 +1,11 @@
 ﻿using Application.Common;
-using Application.Features.Request;
-using Application.Features.Response;
+using Application.Features.Expenses.Request;
+using Application.Features.Expenses.Response;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Application.Features.Intefaces
+namespace Application.Features.Expenses.Intefaces
 {
     public interface IExpenseService
     {

@@ -11,24 +11,23 @@ import {
   Settings,
   Wallet,
 } from "lucide-react";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const OPTIONS = [
-  { label: "Dashboard", value: "dashboard", icon: LayoutDashboard, link: "/" },
+  {
+    label: "Dashboard",
+    value: "dashboard",
+    icon: LayoutDashboard,
+    link: "/",
+  },
   { label: "Expenses", value: "expenses", icon: Receipt, link: "/expenses" },
   { label: "Reports", value: "reports", icon: BarChart3, link: "/reports" },
   { label: "Settings", value: "settings", icon: Settings, link: "/settings" },
 ];
 
 const AppSideBar = () => {
-  const [active, setActive] = useState("dashboard");
-
   const navigate = useNavigate();
-
-  const handleNavigation = (link: string) => {
-    navigate(link);
-  };
+  const { pathname } = useLocation();
 
   return (
     <Sidebar collapsible="offcanvas">
@@ -48,15 +47,15 @@ const AppSideBar = () => {
       <SidebarContent className="p-3 space-y-1">
         {OPTIONS.map((item) => {
           const Icon = item.icon;
-          const isActive = active === item.value;
+          const isActive =
+            item.link === "/"
+              ? pathname === "/"
+              : pathname.startsWith(item.link);
 
           return (
             <button
               key={item.value}
-              onClick={() => {
-                setActive(item.value);
-                handleNavigation(item.link);
-              }}
+              onClick={() => navigate(item.link)}
               className={cn(
                 "w-full flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition",
                 isActive

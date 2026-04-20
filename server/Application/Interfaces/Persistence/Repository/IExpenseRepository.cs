@@ -1,6 +1,6 @@
 ﻿using Application.Common;
-using Application.Features.Request;
-using Application.Features.Response;
+using Application.Features.Expenses.Request;
+using Application.Features.Expenses.Response;
 using Domain.Entity;
 using System;
 using System.Collections.Generic;

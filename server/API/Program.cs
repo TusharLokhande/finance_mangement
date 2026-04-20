@@ -1,9 +1,11 @@
 using API.Extensions;
 using API.Middlewares;
 using Application;
-using Application.Features.Request;
+using Application.Features.Expenses.Request;
 using FluentValidation;
 using InfraStructure;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.Identity.Web;
 using Scalar.AspNetCore;
 using Scrutor;
 
@@ -15,7 +17,13 @@ builder.Services
     .AddInfrastructure(builder.Configuration)
     .AddCorsPolicy(builder.Configuration)
     .AddApplication();
-            
+
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddMicrosoftIdentityWebApi(builder.Configuration.GetSection("AzureAd"));
+
+builder.Services.AddAuthorization();
+
 builder.Services.AddControllers(
     (option) => option.Filters.Add<FluentValidatorFilter>()
 );

@@ -1,14 +1,13 @@
 ﻿using Application.Common;
 using Application.Enums;
-using Application.Features.Intefaces;
-using Application.Features.Request;
-using Application.Features.Response;
+using Application.Features.Expenses.Intefaces;
+using Application.Features.Expenses.Request;
+using Application.Features.Expenses.Response;
 using Application.Interfaces;
 using Application.Interfaces.Persistence.Repository;
-using Domain.Entity;
 using Microsoft.Extensions.Logging;
 
-namespace Application.Features.Services
+namespace Application.Features.Expenses.Services
 {
     public class ExpenseService : IExpenseService
     {
@@ -39,7 +38,7 @@ namespace Application.Features.Services
 
                 var TagIds = _TagRepository.InsertTag(request.Tags);
 
-                Expenses expense = new Expenses(request.Amount, request.Category, request.Date, request.Description, request.Payment);
+                Domain.Entity.Expenses expense = new Domain.Entity.Expenses(request.Amount, request.Category, request.Date, request.Description, request.Payment);
                 expense.AddTags(TagIds);
                 await _ExpenseRepository.AddAsync(expense);
                 await _Uow.SaveChangesAsync();

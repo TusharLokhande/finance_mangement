@@ -13,7 +13,7 @@ namespace InfraStructure.Persistence.Configurations
         {
             base.Configure(builder);
             builder.ToTable("Users");
-            builder.Property(k => k.EmailId).HasMaxLength(255);
+            builder.Property(k => k.Email).HasMaxLength(255);
             builder.Property(k => k.Name).HasMaxLength(255);
         }
     }

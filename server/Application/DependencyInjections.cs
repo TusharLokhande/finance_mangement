@@ -1,5 +1,5 @@
-﻿using Application.Features.Intefaces;
-using Application.Features.Services;
+﻿using Application.Features.Expenses.Intefaces;
+using Application.Features.Expenses.Services;
 using Mapster;
 using MapsterMapper;
 using Microsoft.Extensions.DependencyInjection;
