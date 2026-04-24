@@ -1,6 +1,5 @@
 import { create } from "zustand";
-
-const STORAGE_KEY = "auth_session";
+import { createJSONStorage, persist } from "zustand/middleware";
 
 type UserType = {
   id?: string;
@@ -13,41 +12,29 @@ type AuthState = {
   accessToken: string | null;
   setSession: (user: UserType, token: string) => void;
   clearSession: () => void;
-  restoreSession: () => void;
 };
 
-export const useAuthStore = create<AuthState>((set, get) => ({
-  user: null,
-  accessToken: null,
-
-  setSession: (user: UserType, token: string) => {
-    const session = { user, accessToken: token };
-    sessionStorage.setItem(STORAGE_KEY, JSON.stringify(session));
-
-    set({
-      user,
-      accessToken: token,
-    });
-  },
-
-  clearSession: () => {
-    sessionStorage.removeItem(STORAGE_KEY);
-
-    set({
+export const useAuthStore = create<AuthState>()(
+  persist(
+    (set) => ({
       user: null,
       accessToken: null,
-    });
-  },
 
-  restoreSession: () => {
-    const stored = sessionStorage.getItem(STORAGE_KEY);
-    if (!stored) return;
+      setSession: (user, token) =>
+        set({
+          user,
+          accessToken: token,
+        }),
 
-    const session = JSON.parse(stored);
-
-    set({
-      user: session.user,
-      accessToken: session.accessToken,
-    });
-  },
-}));
+      clearSession: () =>
+        set({
+          user: null,
+          accessToken: null,
+        }),
+    }),
+    {
+      name: "auth_session",
+      storage: createJSONStorage(() => sessionStorage),
+    },
+  ),
+);

@@ -1,10 +1,8 @@
-﻿using Application.Common;
-using Application.Interfaces.Services;
+﻿using Application.Interfaces.Services;
 using Domain.Entity;
 using InfraStructure.Persistence.Context;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
-using System.Net.Http;
 using System.Security.Claims;
 
 namespace InfraStructure.Services
@@ -31,22 +29,8 @@ namespace InfraStructure.Services
             }
 
             var user = context.User;
-            var oid = user.FindFirstValue("oid");
-
+            var oid = user.FindFirst("http://schemas.microsoft.com/identity/claims/objectidentifier")?.Value;
             var appUser = await _db.Users.FirstOrDefaultAsync(x => x.AzureOid == oid);
-
-            if (appUser == null)
-            {
-                appUser = new Users
-                {
-                    Id = Guid.NewGuid(),
-                    AzureOid = oid!,
-                    Email = user.FindFirstValue("preferred_username")!,
-                    Name = user.FindFirstValue("name")!
-                };
-                _db.Users.Add(appUser);
-                await _db.SaveChangesAsync();
-            }
             context.Items["CurrentUser"] = appUser;
             return appUser.Id;
         }

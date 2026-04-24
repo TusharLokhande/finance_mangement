@@ -10,5 +10,7 @@ namespace Domain.Entity
         public string Name { get; set; }    
         public string Email { get; set; }
         public string AzureOid { get; set; }
+
+        public List<ExpensesEntity> Expenses { get; set; } = new List<ExpensesEntity>();
     }
 }

@@ -103,6 +103,10 @@ export default function useDataTable<T>(props: UseDataTableProps<T>) {
       const next =
         typeof updater === "function" ? updater(sortingState) : updater;
       setSorting(tableKey, next);
+      setPagination(tableKey, {
+        pageIndex: 0,
+        pageSize: pagination.pageSize,
+      });
     },
     onRowSelectionChange: (updater) => {
       const next =

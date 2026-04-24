@@ -7,7 +7,7 @@ import { MultiChipOverflow } from "@/components/multi-chip";
 import { Badge } from "@/components/ui/badge";
 import { useConfirm } from "@/hooks/use-confirm";
 import { formatDate } from "@/lib/utils";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { CATEGORY_OPTIONS } from "../constants";
 import { EXPENSE_DASHBOARD_QUERY_KEY } from "../constants/query";
 import { useDeleteExpense } from "../hooks/mutations/use-create-expense-hook";
@@ -40,28 +40,33 @@ const ExpenseTable = ({ onEdit, filters }: ExpenseTableProps) => {
   const [viewPanelOpen, setViewPanelOpen] = useState(false);
   const [tempExpense, setTempExpense] = useState<ExpenseInput | null>(null);
 
-  const { data } = useGetExpenseDashboardData({
-    request: {
+  useEffect(() => {
+    handleResetPagination();
+  }, [filters]);
+
+  const request = useMemo(
+    () => ({
       page,
       pageSize,
       sorting: sort?.field
         ? {
-            field: sort?.field || "date",
-            direction: sort?.order === "asc" ? "asc" : "desc",
+            field: sort.field || "date",
+            direction: sort.order === "asc" ? "asc" : "desc",
           }
         : undefined,
-      startDate: filters.startDate ? filters.startDate : undefined,
-      endDate: filters.endDate ? filters.endDate : undefined,
+      startDate: filters.startDate || undefined,
+      endDate: filters.endDate || undefined,
       category: Number(filters.category) || undefined,
       searchText: filters.searchText,
-    },
+    }),
+    [page, pageSize, sort, filters],
+  );
+
+  const { data } = useGetExpenseDashboardData({
+    request: request as any,
   });
 
   const { mutate: deleteExpense } = useDeleteExpense();
-
-  useEffect(() => {
-    handleResetPagination();
-  }, [filters, sort]);
 
   const expenseData = data?.data || [];
   const PAGE_COUNT = data?.pageCount || 0;

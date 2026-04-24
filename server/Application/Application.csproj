@@ -7,16 +7,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Features\Auth\Mappings\" />
+    <Folder Include="Features\Auth\Validation\" />
+    <Folder Include="Features\Auth\Response\" />
     <Folder Include="Features\Expenses\Mappings\" />
     <Folder Include="Features\Expenses\Intefaces\" />
     <Folder Include="Features\Expenses\Services\" />
-    <Folder Include="Features\Auth\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="FluentValidation" Version="12.1.1" />
     <PackageReference Include="Mapster" Version="10.0.7" />
     <PackageReference Include="Mapster.DependencyInjection" Version="10.0.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.3.9" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.5" />
   </ItemGroup>
 

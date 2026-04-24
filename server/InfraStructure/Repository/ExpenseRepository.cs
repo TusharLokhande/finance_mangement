@@ -2,25 +2,29 @@
 using Application.Features.Expenses.Request;
 using Application.Features.Expenses.Response;
 using Application.Interfaces.Persistence.Repository;
+using Application.Interfaces.Services;
 using Domain.Entity;
 using InfraStructure.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
 
 namespace InfraStructure.Repository
 {
-    public class ExpenseRepository : GenericRepository<Expenses>, IExpenseRepository
+    public class ExpenseRepository : GenericRepository<ExpensesEntity>, IExpenseRepository
     {
         private readonly AppDbContext _db;
-        public ExpenseRepository(AppDbContext db) : base(db)
+        private readonly ICurrentUserService _currentUserService;
+        public ExpenseRepository(AppDbContext db, ICurrentUserService current) : base(db)
         {
             _db = db;
+            _currentUserService = current;
         }
 
         public async Task<PagedResult<ExpenseDashboardDto>> GetDashboardAsync(ExpenseDashboardRequest request)
         {
+            var UserId = await _currentUserService.GetUserIdAsync();
             var query = _db.Expenses
                 .AsNoTracking()
-                .AsQueryable().Where(k => k.IsActive);
+                .AsQueryable().Where(k => k.UserId == UserId && k.IsActive );
 
             if (request.StartDate.HasValue)
             {
@@ -78,7 +82,6 @@ namespace InfraStructure.Repository
                     Description = x.Description,
                     Date = x.Date,
                     Payment = x.Payment,
-
                     Tags = x.ExpenseTagMapping
                             .Select(m => m.Tags.TagName)
                             .ToList()
@@ -112,7 +115,7 @@ namespace InfraStructure.Repository
         }
 
 
-        public async Task<Expenses> GetExpenseToModify(Guid Id)
+        public async Task<ExpensesEntity> GetExpenseToModify(Guid Id)
         {
             var result = await _db.Expenses.Where(k => k.Id == Id).Include(k => k.ExpenseTagMapping).FirstOrDefaultAsync();
             return result;

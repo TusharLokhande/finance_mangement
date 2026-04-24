@@ -19,7 +19,7 @@
 
         public Guid TagId { get; set; }
         public Guid ExpenseId { get; set; }
-        public Expenses Expense { get; set; }
+        public ExpensesEntity Expense { get; set; }
         public Tags Tags { get; set; }
     }
 }

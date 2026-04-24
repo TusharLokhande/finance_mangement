@@ -16,7 +16,7 @@ namespace InfraStructure.Persistence.Context
         {
         }
 
-        public DbSet<Expenses> Expenses => Set<Expenses>();
+        public DbSet<ExpensesEntity> Expenses => Set<ExpensesEntity>();
         public DbSet<ExpenseTagMapping> ExpenseTagMapping => Set<ExpenseTagMapping>();
         public DbSet<Tags> Tags => Set<Tags>();
         public DbSet<Users> Users => Set<Users>();

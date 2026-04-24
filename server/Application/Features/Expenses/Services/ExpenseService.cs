@@ -5,6 +5,8 @@ using Application.Features.Expenses.Request;
 using Application.Features.Expenses.Response;
 using Application.Interfaces;
 using Application.Interfaces.Persistence.Repository;
+using Application.Interfaces.Services;
+using Domain.Entity;
 using Microsoft.Extensions.Logging;
 
 namespace Application.Features.Expenses.Services
@@ -16,18 +18,21 @@ namespace Application.Features.Expenses.Services
         private readonly IUnitOfWork _Uow;
         private readonly ITagRepository _TagRepository;
         private readonly ILogger<ExpenseService> _Logger;
+        private readonly ICurrentUserService _currentUser;
 
         public ExpenseService(
                 IExpenseRepository ExpenseRepository,
                 IUnitOfWork uow,
                 ITagRepository tagRepository,
-                ILogger<ExpenseService> logger
+                ILogger<ExpenseService> logger,
+                ICurrentUserService currentUser
             )
         {
             _ExpenseRepository = ExpenseRepository;
             _Uow = uow;
             _TagRepository = tagRepository;
             _Logger = logger;
+            _currentUser = currentUser;
         }
 
 
@@ -37,8 +42,17 @@ namespace Application.Features.Expenses.Services
             {
 
                 var TagIds = _TagRepository.InsertTag(request.Tags);
+                var UserId = await _currentUser.GetUserIdAsync();
 
-                Domain.Entity.Expenses expense = new Domain.Entity.Expenses(request.Amount, request.Category, request.Date, request.Description, request.Payment);
+                ExpensesEntity expense = new ExpensesEntity(
+                    request.Amount, 
+                    request.Category, 
+                    request.Date, 
+                    request.Description, 
+                    request.Payment,
+                    UserId
+                );
+
                 expense.AddTags(TagIds);
                 await _ExpenseRepository.AddAsync(expense);
                 await _Uow.SaveChangesAsync();

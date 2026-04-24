@@ -1,4 +1,6 @@
-﻿using Application.Features.Expenses.Intefaces;
+﻿using Application.Features.Auth.Interfaces;
+using Application.Features.Auth.Services;
+using Application.Features.Expenses.Intefaces;
 using Application.Features.Expenses.Services;
 using Mapster;
 using MapsterMapper;
@@ -19,6 +21,7 @@ namespace Application
             #endregion
 
             services.AddScoped<IExpenseService, ExpenseService>();
+            services.AddScoped<IAuthService, AuthService>();
 
             return services;
         }

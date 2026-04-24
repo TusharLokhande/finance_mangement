@@ -6,15 +6,16 @@ using System.Text;
 
 namespace Domain.Entity
 {
-    public class Expenses: BaseEntity
+    public class ExpensesEntity: BaseEntity
     {
-        private Expenses() { } 
-        public Expenses(
+        private ExpensesEntity() { } 
+        public ExpensesEntity(
                 decimal amt,
                 CategoryEnum category,
                 DateTimeOffset date,
                 string desc,
-                PaymentTypeEnum payment
+                PaymentTypeEnum payment,
+                Guid userId
             )
         {
             Id = Guid.NewGuid();
@@ -24,14 +25,22 @@ namespace Domain.Entity
             Date = date;
             CreatedAt = DateTimeOffset.UtcNow;
             Payment= payment;
+            UserId = userId;
         }
 
         public decimal Amount { get; set; }
         public CategoryEnum Category { get; set; }
         public string Description { get; set; }
         public DateTimeOffset Date { get; set; }
-        public ICollection<ExpenseTagMapping> ExpenseTagMapping { get; set; } = new List<ExpenseTagMapping>();
         public PaymentTypeEnum Payment { get; set; }
+        public Guid UserId { get; set; }
+
+        #region Navigation Properties 
+        public ICollection<ExpenseTagMapping> ExpenseTagMapping { get; set; } = new List<ExpenseTagMapping>();
+
+        public Users User { get; set; }
+
+        #endregion
 
         /// <summary>
         /// INSERT / UPDATE THE TAGS

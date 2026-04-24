@@ -2,14 +2,16 @@ import { useAuthStore } from "@/app/store/user-store";
 import { Button } from "@/components/ui/button";
 import { msalLogin } from "@/config/authConfig";
 import { useNavigate } from "react-router-dom";
+import { useLogin } from "../hooks/queries/use-login-hook";
 
 const Login = () => {
   const { setSession } = useAuthStore();
-
+  const { refetch } = useLogin();
   const navigate = useNavigate();
   const handleLogin = async () => {
     try {
       const result = await msalLogin();
+      await refetch();
       setSession(
         {
           id: result.account?.homeAccountId,

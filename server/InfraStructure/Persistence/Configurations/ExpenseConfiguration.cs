@@ -8,9 +8,9 @@ using System.Threading.RateLimiting;
 
 namespace InfraStructure.Persistence.Configurations
 {
-    public class ExpenseConfiguration: BaseConfiguration<Expenses>
+    public class ExpenseConfiguration: BaseConfiguration<ExpensesEntity>
     {
-        public override void Configure(EntityTypeBuilder<Expenses> builder)
+        public override void Configure(EntityTypeBuilder<ExpensesEntity> builder)
         {
             base.Configure(builder);
 
@@ -29,6 +29,21 @@ namespace InfraStructure.Persistence.Configurations
 
             builder.Property(x => x.Date)
                    .IsRequired();
+
+            builder.HasIndex(x => new
+            {
+                x.UserId, x.IsActive, 
+            });
+
+            builder.HasIndex(x => new
+            {
+                x.Category, x.Amount, 
+            });
+
+            builder.HasOne(k => k.User)
+                   .WithMany(k => k.Expenses)
+                   .HasForeignKey(k => k.UserId)
+                   .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

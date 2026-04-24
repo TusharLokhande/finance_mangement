@@ -25,8 +25,8 @@ export const useTableState = (tableKey: string) => {
   const handleResetPagination = () =>
     tableState &&
     useTableStore.getState().setPagination(tableKey, {
-      ...tableState.pagination,
       pageIndex: 0,
+      pageSize: pagination.pageSize ?? 10,
     });
 
   return {
