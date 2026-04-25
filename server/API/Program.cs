@@ -5,6 +5,7 @@ using Application.Features.Expenses.Request;
 using FluentValidation;
 using InfraStructure;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.Identity.Web;
 using Scalar.AspNetCore;
 using Scrutor;
@@ -38,6 +39,12 @@ builder.Services.Scan(scan =>
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
+builder.Services.AddHealthChecks()
+    .AddNpgSql(
+        builder.Configuration.GetConnectionString("DefaultConnection"),
+        name: "postgres"
+    );
+
 var app = builder.Build();
 
 app.UseHttpsRedirection();
@@ -57,4 +64,17 @@ app.UseAuthorization();
 app.UseRateLimiter();
 app.UseGlobalExpectionMiddleware();
 app.MapControllers();
+
+app.MapHealthChecks("/health/live", new HealthCheckOptions
+{
+    Predicate = _ => false
+});
+
+app.MapHealthChecks("/health/ready", new HealthCheckOptions
+{
+    Predicate = _ => true
+});
+
+await app.Services.ApplyMigrationsAsync();
+
 app.Run();

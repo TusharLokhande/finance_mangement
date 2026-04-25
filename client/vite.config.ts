@@ -12,4 +12,13 @@ export default defineConfig({
       "@/assets": path.resolve(__dirname, "./src/assets"),
     },
   },
+  server: {
+    proxy: {
+      "/api": {
+        target: "http://localhost:5000", // your backend port
+        changeOrigin: true,
+        secure: false,
+      },
+    },
+  },
 });
