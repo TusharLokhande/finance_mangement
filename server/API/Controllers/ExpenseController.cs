@@ -1,6 +1,7 @@
 ﻿using API.Extensions;
 using Application.Features.Expenses.Intefaces;
 using Application.Features.Expenses.Request;
+using Domain.Enums;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -58,9 +59,9 @@ namespace API.Controllers
         }
 
         [HttpGet("stats")]
-        public async Task<IActionResult> GetDisplayStats()
+        public async Task<IActionResult> GetDisplayStats([FromQuery] DateTimeOffset? startDate, DateTimeOffset? endDate, CategoryEnum? category)
         {
-            var result = await _ExpenseService.GetExpenseStatsForDisplay();
+            var result = await _ExpenseService.GetExpenseStatsForDisplay(startDate, endDate, category);
             return result.ToActionResult();
         }
     }

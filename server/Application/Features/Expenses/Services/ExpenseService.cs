@@ -7,6 +7,7 @@ using Application.Interfaces;
 using Application.Interfaces.Persistence.Repository;
 using Application.Interfaces.Services;
 using Domain.Entity;
+using Domain.Enums;
 using Microsoft.Extensions.Logging;
 
 namespace Application.Features.Expenses.Services
@@ -45,10 +46,10 @@ namespace Application.Features.Expenses.Services
                 var UserId = await _currentUser.GetUserIdAsync();
 
                 ExpensesEntity expense = new ExpensesEntity(
-                    request.Amount, 
-                    request.Category, 
-                    request.Date, 
-                    request.Description, 
+                    request.Amount,
+                    request.Category,
+                    request.Date,
+                    request.Description,
                     request.Payment,
                     UserId
                 );
@@ -68,7 +69,7 @@ namespace Application.Features.Expenses.Services
         public async Task<Result<Guid>> Delete(Guid id)
         {
             var expense = await _ExpenseRepository.FirstOrDefaultAsync(x => x.Id == id);
-            if(expense == null)
+            if (expense == null)
                 return Result<Guid>.Failure("Expense not found!", ErrorStatus.NotFound);
 
             await _ExpenseRepository.DeleteAsync(expense);
@@ -77,7 +78,7 @@ namespace Application.Features.Expenses.Services
             return Result<Guid>.Success(id, "Expense Delete Successfully.");
         }
 
-        public async  Task<Result<Guid>> Modify(ExpenseDto request, Guid Id)
+        public async Task<Result<Guid>> Modify(ExpenseDto request, Guid Id)
         {
 
             var TagIds = _TagRepository.InsertTag(request.Tags);
@@ -111,12 +112,12 @@ namespace Application.Features.Expenses.Services
         public async Task<Result<DisplayExpense?>> GetExpenseForDisplay(Guid Id)
         {
             var data = await _ExpenseRepository.GetDisplayExpense(Id);
-            return Result<DisplayExpense?>.Success(data);   
+            return Result<DisplayExpense?>.Success(data);
         }
 
-        public async Task<Result<ExpenseStatsDto>> GetExpenseStatsForDisplay()
+        public async Task<Result<ExpenseStatsDto>> GetExpenseStatsForDisplay(DateTimeOffset? startDate, DateTimeOffset? endDate, CategoryEnum? category)
         {
-            var data = await _ExpenseRepository.GetExpenseStats();
+            var data = await _ExpenseRepository.GetExpenseStats(startDate, endDate, category);
             return Result<ExpenseStatsDto>.Success(data);
         }
     }

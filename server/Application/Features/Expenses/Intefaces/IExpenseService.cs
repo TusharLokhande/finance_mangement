@@ -1,6 +1,7 @@
 ﻿using Application.Common;
 using Application.Features.Expenses.Request;
 using Application.Features.Expenses.Response;
+using Domain.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -19,6 +20,6 @@ namespace Application.Features.Expenses.Intefaces
 
         Task<Result<DisplayExpense?>> GetExpenseForDisplay(Guid Id);
 
-        Task<Result<ExpenseStatsDto>> GetExpenseStatsForDisplay();
+        Task<Result<ExpenseStatsDto>> GetExpenseStatsForDisplay(DateTimeOffset? startDate, DateTimeOffset? endDate, CategoryEnum? category);
     }
 }

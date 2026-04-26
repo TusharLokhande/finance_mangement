@@ -33,10 +33,18 @@ export const useGetExpense = (id: string) => {
   return query;
 };
 
-export const useGetExpenseStats = () => {
+export const useGetExpenseStats = ({
+  startDate,
+  endDate,
+  category,
+}: {
+  startDate: Date;
+  endDate: Date;
+  category: number | null;
+}) => {
   const query = useQuery({
-    queryKey: ["expense-stats"],
-    queryFn: () => getExpenseStats(),
+    queryKey: ["expense-stats", startDate, endDate, category],
+    queryFn: () => getExpenseStats({ startDate, endDate, category }),
   });
 
   return query;

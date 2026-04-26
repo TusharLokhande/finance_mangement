@@ -14,6 +14,9 @@ namespace Domain.Enums
         ENTERTAINMENT= 6,
         HEALTHCARE= 7,
         LENT= 8,
+        BAD_HABBITS = 9,
+        INVESTMENTS = 10,
+        LEARNING = 11,
         MISC= 99,
     }
 }

@@ -7,6 +7,9 @@ const CategoryEnum = {
   ENTERTAINMENT: 6,
   HEALTHCARE: 7,
   LENT: 8,
+  BAD_HABBITS: 9,
+  INVESTMENTS: 10,
+  LEARNING: 11,
   MISC: 99,
 } as const;
 
@@ -50,6 +53,21 @@ export const CATEGORY_OPTIONS = [
     value: CategoryEnum.LENT,
     label: "Lent",
     className: "bg-amber-100 text-amber-700 border-amber-200",
+  },
+  {
+    value: CategoryEnum.BAD_HABBITS,
+    label: "Bad Habbits",
+    className: "bg-gray-100 text-gray-700 border-gray-200",
+  },
+  {
+    value: CategoryEnum.INVESTMENTS,
+    label: "Investments",
+    className: "bg-purple-100 text-purple-700 border-purple-200",
+  },
+  {
+    value: CategoryEnum.LEARNING,
+    label: "Learning",
+    className: "bg-blue-100 text-blue-700 border-blue-200",
   },
   {
     value: CategoryEnum.MISC,

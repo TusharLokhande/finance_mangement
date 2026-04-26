@@ -5,10 +5,16 @@ import { useMemo } from "react";
 import { getCategoryName } from "../helper";
 import { useGetExpenseStats } from "../hooks/queries/use-expense-hook";
 
-const ExpenseSummaryCards: React.FC = () => {
-  const { data: summary, isLoading, isError } = useGetExpenseStats();
-
-  console.log("ExpenseSummaryCards - summary data:", summary);
+const ExpenseSummaryCards: React.FC<{
+  startDate: Date;
+  endDate: Date;
+  category: number | null;
+}> = ({ startDate, endDate, category }) => {
+  const {
+    data: summary,
+    isLoading,
+    isError,
+  } = useGetExpenseStats({ startDate, endDate, category: category ?? null });
 
   const topCategory = useMemo(() => {
     if (!summary) return null;
@@ -38,7 +44,7 @@ const ExpenseSummaryCards: React.FC = () => {
             }`}
           >
             {(summary?.percentChange || 0) >= 0 ? "+0.0" : "0.0"}
-            {summary?.percentChange?.toFixed(1)}% vs last month
+            {summary?.percentChange?.toFixed(2)}% vs last month
           </p>
         </CardContent>
       </Card>
@@ -50,7 +56,9 @@ const ExpenseSummaryCards: React.FC = () => {
           <Calendar className="h-4 w-4 text-muted-foreground" />
         </CardHeader>
         <CardContent>
-          <div className="text-2xl font-bold">₹{summary?.weekly ?? 0}</div>
+          <div className="text-2xl font-bold">
+            ₹{summary?.weekly?.toFixed(2) || 0}
+          </div>
           <p className="text-xs text-muted-foreground">Last 7 days</p>
         </CardContent>
       </Card>
@@ -74,7 +82,9 @@ const ExpenseSummaryCards: React.FC = () => {
           <BarChart3 className="h-4 w-4 text-muted-foreground" />
         </CardHeader>
         <CardContent>
-          <div className="text-2xl font-bold">₹{summary?.avg || 0}</div>
+          <div className="text-2xl font-bold">
+            ₹{summary?.avg?.toFixed(2) || 0}
+          </div>
           <p className="text-xs text-muted-foreground">Per entry</p>
         </CardContent>
       </Card>

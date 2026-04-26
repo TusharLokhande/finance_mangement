@@ -1,5 +1,5 @@
 import { FormDatePicker } from "@/components/form/date-picker";
-import { FormInput } from "@/components/form/input";
+import { FormCurrencyInput } from "@/components/form/numberic";
 import { FormDropdown } from "@/components/form/select";
 import { FormTextarea } from "@/components/form/text-area";
 import { Button } from "@/components/ui/button";
@@ -22,6 +22,8 @@ const INITIAL_TAG_OPTIONS = [
   { label: "Petrol", value: "petrol" },
   { label: "Breakfast", value: "breakfast" },
   { label: "Lunch", value: "lunch" },
+  { label: "Physiotherapy", value: "physiotherapy" },
+  { label: "Quick Commerce", value: "quick-commerce" },
 ];
 
 const AddExpenseForm = ({
@@ -39,7 +41,7 @@ const AddExpenseForm = ({
     defaultValues: {
       id: tempExpense?.id || undefined,
       date: tempExpense?.date ? new Date(tempExpense.date) : new Date(),
-      amount: tempExpense?.amount || 0,
+      amount: tempExpense?.amount || undefined,
       description: tempExpense?.description || "",
       tags: tempExpense?.tags || [],
       category: tempExpense?.category || 0,
@@ -73,6 +75,8 @@ const AddExpenseForm = ({
       description: "",
       tags: [],
       category: 0,
+      date: form.getValues("date"),
+      payment: 0,
     });
   });
 
@@ -81,9 +85,8 @@ const AddExpenseForm = ({
       <span className="font-sans text-xl font-medium">Add New Expense</span>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-        <FormInput
+        <FormCurrencyInput
           label="Amount"
-          type="number"
           control={form.control}
           name={"amount"}
         />

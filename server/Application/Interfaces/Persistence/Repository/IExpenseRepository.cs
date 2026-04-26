@@ -2,6 +2,7 @@
 using Application.Features.Expenses.Request;
 using Application.Features.Expenses.Response;
 using Domain.Entity;
+using Domain.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -16,6 +17,6 @@ namespace Application.Interfaces.Persistence.Repository
 
         Task<ExpensesEntity> GetExpenseToModify(Guid Id);
 
-        Task<ExpenseStatsDto> GetExpenseStats();
+        Task<ExpenseStatsDto> GetExpenseStats(DateTimeOffset? startDate = null, DateTimeOffset? endDate = null, CategoryEnum? category = null);
     }
 }

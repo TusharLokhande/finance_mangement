@@ -53,7 +53,7 @@ namespace InfraStructure.Persistence
 
         private async Task ApplyAuditInformation()
         {
-            var entries = _context.ChangeTracker.Entries<BaseEntity>();
+            var entries = _context.ChangeTracker.Entries<BaseEntity>().ToList();
 
             foreach (var entry in entries)
             {

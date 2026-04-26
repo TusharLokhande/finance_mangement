@@ -9,7 +9,6 @@ import {
 import { useSidebar } from "@/components/ui/sidebar";
 import { Switch } from "@/components/ui/switch";
 import { msalLogout } from "@/config/authConfig";
-import { useMsal } from "@azure/msal-react";
 import { LogOut, Moon, Sidebar, Sun, Wallet } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
@@ -18,9 +17,6 @@ const AppHeader = () => {
   const { theme, setTheme } = useThemeStore();
   const { user, clearSession } = useAuthStore();
   const navigate = useNavigate();
-  const { accounts } = useMsal();
-
-  console.log(user, accounts[0]);
 
   const isDark = theme === "dark";
 

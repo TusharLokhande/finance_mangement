@@ -29,6 +29,7 @@ const Expense: FC<ExpenseProps> = ({}) => {
   };
 
   const handleEditExpense = (expense: any) => {
+    console.log("Editing expense:", expense);
     setTempExpense(expense);
   };
 
@@ -38,7 +39,11 @@ const Expense: FC<ExpenseProps> = ({}) => {
       <ExpenseDashboardFilter filters={filters} setFilters={setFilters} />
 
       {/* STATS */}
-      <ExpenseSummaryCards />
+      <ExpenseSummaryCards
+        startDate={filters.startDate as Date}
+        endDate={filters.endDate as Date}
+        category={filters.category}
+      />
 
       {/* BODY & RECENT TRANSACTIONS  */}
       <div className="mt-6 flex gap-4 min-h-40">

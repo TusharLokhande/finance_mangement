@@ -4,6 +4,7 @@ using Application.Features.Expenses.Response;
 using Application.Interfaces.Persistence.Repository;
 using Application.Interfaces.Services;
 using Domain.Entity;
+using Domain.Enums;
 using InfraStructure.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
 
@@ -121,12 +122,20 @@ namespace InfraStructure.Repository
             return result;
         }
 
-        public async Task<ExpenseStatsDto> GetExpenseStats()
+        public async Task<ExpenseStatsDto> GetExpenseStats(DateTimeOffset? startDate = null, DateTimeOffset? endDate = null, CategoryEnum? category = null)
         {
+            string s = startDate.HasValue ? startDate.Value.Date.ToString() : "";
             var result = await _db.Set<ExpenseStatsDtoRaw>()
-            .FromSqlRaw("SELECT * FROM get_expense_stats()")
-            .AsNoTracking()
-            .FirstAsync();
+                                .FromSqlInterpolated($@"
+                                    SELECT * 
+                                    FROM get_expense_stats_v2(
+                                        {startDate}, 
+                                        {endDate},
+                                        {category}
+                                    )
+                                ")
+                                .AsNoTracking()
+                                .FirstAsync();
 
             var percentChange = result.PrevMonthTotal == 0
                 ? 100

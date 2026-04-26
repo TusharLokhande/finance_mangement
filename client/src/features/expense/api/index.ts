@@ -62,8 +62,21 @@ export const getDashboardDataAsync: (
   return data;
 };
 
-export const getExpenseStats: () => Promise<ExpenseStatsResponse> =
-  async () => {
-    const { data } = await apiClient.get("/expense/stats");
-    return data;
-  };
+export const getExpenseStats: ({
+  startDate,
+  endDate,
+  category,
+}: {
+  startDate: Date;
+  endDate: Date;
+  category: number | null;
+}) => Promise<ExpenseStatsResponse> = async ({
+  startDate,
+  endDate,
+  category,
+}) => {
+  const { data } = await apiClient.get("/expense/stats", {
+    params: { startDate, endDate, category: category?.toString() },
+  });
+  return data;
+};
