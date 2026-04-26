@@ -46,12 +46,12 @@ const Expense: FC<ExpenseProps> = ({}) => {
       />
 
       {/* BODY & RECENT TRANSACTIONS  */}
-      <div className="mt-6 flex gap-4 min-h-40">
+      <div className="mt-6 flex flex-col lg:flex-row gap-4 min-h-40">
         <div className="flex-1  max-h-full rounded-xl shadow px-4 py-4">
           <ExpenseTable onEdit={handleEditExpense} filters={filters} />
         </div>
 
-        <div className="w-1/3 border border-border min-h-full rounded-xl shadow">
+        <div className="w-full lg:w-1/3 border border-border min-h-full rounded-xl shadow">
           <AddExpenseForm
             key={tempExpense?.id ?? "new"}
             tempExpense={tempExpense}
