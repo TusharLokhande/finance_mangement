@@ -49,7 +49,27 @@ This project is ideal for portfolio demonstration, team collaboration, and deplo
 
 ---
 
-## 🛠 Tech Stack
+## � Screenshots
+
+### Dashboard & Expense Management
+
+The application provides an intuitive, modern UI for tracking and analyzing expenses:
+
+![Expense Tracker Dashboard](docs/images/dashboard.png)
+
+**Key UI Features:**
+
+- 📊 **Dashboard Overview** - Total monthly spend, weekly trends, top spending categories
+- 🔍 **Advanced Search & Filtering** - Search by keyword, category, date range
+- 💳 **Expense Management** - Create, edit, delete expenses with full details
+- 🏷️ **Categories & Tags** - Organize expenses with custom categorization
+- 📈 **Analytics** - Visual insights into spending patterns
+- 🎨 **Responsive Design** - Works seamlessly on desktop, tablet, and mobile
+- 🌓 **Dark/Light Mode** - Theme support for user preference
+
+---
+
+## �🛠 Tech Stack
 
 ### **Frontend**
 
@@ -532,14 +552,14 @@ The backend follows **Uncle Bob's Clean Architecture** principles ensuring maint
 
 ```
     ┌─────────────────────────────────────────┐
-    │         API Layer (Controllers)          │
+    │         API Layer (Controllers)         │
     │  - HTTP request handling                │
     │  - DTO mapping & serialization          │
     │  - Route definition                     │
     └─────────────────────┬───────────────────┘
                           │ depends on
     ┌─────────────────────▼───────────────────┐
-    │   Application Layer (Business Logic)     │
+    │   Application Layer (Business Logic)    │
     │  - CQRS Commands & Queries              │
     │  - Use case orchestration               │
     │  - Service interfaces (contracts)       │
@@ -795,15 +815,6 @@ docker-compose ps
 docker-compose logs -f api
 ```
 
-### Kubernetes Readiness
-
-The application is Kubernetes-ready:
-
-- Health check endpoints for probes
-- Environment-based configuration
-- Container resource requests defined
-- Graceful shutdown handling
-
 ### Production Checklist
 
 - [ ] Environment variables configured
@@ -831,32 +842,6 @@ The application is Kubernetes-ready:
 - [Entity Framework Core](https://docs.microsoft.com/en-us/ef/core/)
 - [React 19 Documentation](https://react.dev)
 - [Docker Best Practices](https://docs.docker.com/develop/dev-best-practices/)
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please follow these guidelines:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit changes (`git commit -m 'Add amazing feature'`)
-4. Push to branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-**Code Standards:**
-
-- Follow C# coding conventions (PascalCase for classes, methods)
-- Write clean, readable code with clear naming
-- Add XML documentation for public APIs
-- Include unit tests for business logic
-- Keep commits atomic and well-described
-
----
-
-## 📝 License
-
-This project is proprietary. All rights reserved.
 
 ---
 
