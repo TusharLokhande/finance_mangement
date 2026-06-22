@@ -1,4 +1,4 @@
-FROM node:24-alpine AS build
+FROM node:26-slim AS build
 WORKDIR /app
 
 ARG VITE_API_BASE_URL
@@ -7,10 +7,10 @@ ENV VITE_API_BASE_URL=$VITE_API_BASE_URL
 ENV VITE_REDIRECT_URI=$VITE_REDIRECT_URI
 
 # Install pnpm
-RUN npm install -g pnpm
+RUN npm install -g corepack && corepack enable && corepack prepare pnpm@11 --activate
 
 # Copy only files needed for install
-COPY package.json pnpm-lock.yaml ./
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 
 # Install dependencies (including devDeps for the build)
 RUN pnpm install --frozen-lockfile
