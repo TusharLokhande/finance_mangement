@@ -1,0 +1,17 @@
+node_modules/
+dist/
+build/
+.next/
+.nuxt/
+.cache/
+
+.git/
+.gitignore
+
+.vscode/
+.idea/
+
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*

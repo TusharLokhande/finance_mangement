@@ -65,7 +65,6 @@ appsettings.Development.json
 # ==========================================
 # Docker
 # ==========================================
-.dockerignore
 docker-compose.override.yml
 
 # ==========================================
@@ -77,8 +76,7 @@ docker-compose.override.yml
 *.mdf
 *.ldf
 *.ndf
-db/data/
-db/backups/
+data/
 
 # ==========================================
 # Logs & Temp

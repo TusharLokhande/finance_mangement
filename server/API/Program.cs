@@ -7,12 +7,14 @@ using InfraStructure;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.Identity.Web;
+using Prometheus;
 using Scalar.AspNetCore;
 using Scrutor;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+builder.Host.AddSerilogLogging(builder.Configuration);
 
 builder.Services
     .AddInfrastructure(builder.Configuration)
@@ -46,7 +48,8 @@ builder.Services.AddHealthChecks()
     );
 
 var app = builder.Build();
-
+app.UseSerilogRequestLogging();
+app.UseCorrelationId();
 app.UseHttpsRedirection();
 app.UseRouting();
 if (app.Environment.IsDevelopment())
@@ -63,8 +66,9 @@ app.UseAuthentication();
 app.UseAuthorization();
 app.UseRateLimiter();
 app.UseGlobalExpectionMiddleware();
+app.UseHttpMetrics();
 app.MapControllers();
-
+app.MapMetrics();
 app.MapHealthChecks("/health/live", new HealthCheckOptions
 {
     Predicate = _ => false
