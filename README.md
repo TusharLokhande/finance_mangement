@@ -27,7 +27,7 @@ A comprehensive full-stack web application built with **ASP.NET Core**, **React 
 - [Setup & Installation](#setup--installation)
 - [Running the Application](#running-the-application)
 - [Key Features](#key-features)
-- [API Features](#api-features)
+- [Monitoring & Tools](#monitoring--tools)
 - [Development](#development)
 - [Deployment](#deployment)
 
@@ -123,6 +123,7 @@ The application provides an intuitive, modern UI for tracking and analyzing expe
   - PostgreSQL readiness probes
   - Structured logging preparation
   - Performance metrics ready
+  - Prometheus + Grafana + Loki monitoring stack
 
 ### **Database**
 
@@ -413,6 +414,35 @@ Runs on http://localhost:5000
 - Container restart policies
 - Service dependencies management
 - Structured logging
+
+---
+
+## 🧰 Monitoring & Tools
+
+This repository includes an integrated observability and tooling stack for production visibility and developer workflows.
+
+### Monitoring Stack
+
+- **Prometheus** collects API metrics via `monitoring/prometheus/prometheus.yml`.
+- **Grafana** provides dashboards and is preconfigured with Prometheus and Loki datasources in `monitoring/grafana/provisioning`.
+- **Loki** aggregates application and container logs for centralized search and troubleshooting.
+- **Health endpoints** on the API provide readiness and liveness checks used by Docker Compose and service orchestration.
+
+### Tooling
+
+- **Docker & Docker Compose** for local and containerized deployment
+- **Nginx** reverse proxy for the frontend and API routing
+- **pnpm** for frontend dependency management and development scripts
+- **dotnet** for backend build, restore, and runtime operations
+- **pg_isready** and **curl** for container health checks and service validation
+
+### Accessing the monitoring services
+
+- **Grafana:** http://localhost:3000
+- **Prometheus:** http://localhost:9090
+- **Loki:** http://localhost:3100
+- **API:** http://localhost:5000
+- **Frontend:** http://localhost
 
 ---
 
