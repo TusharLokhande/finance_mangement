@@ -1,8 +1,6 @@
-﻿using Application.Features.Expenses.Response;
-using Application.Interfaces.Services;
+﻿using Application.Features.Transactions.Response;
 using Domain.Entity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 
 namespace InfraStructure.Persistence.Context
 {
@@ -16,15 +14,16 @@ namespace InfraStructure.Persistence.Context
         {
         }
 
-        public DbSet<ExpensesEntity> Expenses => Set<ExpensesEntity>();
-        public DbSet<ExpenseTagMapping> ExpenseTagMapping => Set<ExpenseTagMapping>();
+        public DbSet<TransactionEntity> Transactions => Set<TransactionEntity>();
+        public DbSet<TransactionTagMapping> TransactionTagMapping => Set<TransactionTagMapping>();
         public DbSet<Tags> Tags => Set<Tags>();
         public DbSet<Users> Users => Set<Users>();
+        public DbSet<AccountEntity> BankAccounts => Set<AccountEntity>();
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
-            modelBuilder.Entity<ExpenseStatsDtoRaw>().HasNoKey().ToView(null);
+            modelBuilder.Entity<TransactionStatsDtoRaw>().HasNoKey().ToView(null);
             base.OnModelCreating(modelBuilder);
         }
     }

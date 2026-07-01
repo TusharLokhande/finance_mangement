@@ -5,7 +5,12 @@ using System.Text;
 
 namespace Application.Interfaces.Persistence.Repository
 {
-    public interface IUserRepository: IGenericRepository<Users>
+    public interface IUserRepository : IGenericRepository<Users>
     {
+        Task<Users> CreateUserIfNotExists(
+           string name,
+           string email,
+           string azureOid
+       );
     }
 }

@@ -1,4 +1,5 @@
-﻿using Application.Interfaces.Services;
+﻿using Application.Interfaces.Persistence.Repository;
+using Application.Interfaces.Services;
 using Domain.Entity;
 using InfraStructure.Persistence.Context;
 using Microsoft.AspNetCore.Http;
@@ -11,11 +12,13 @@ namespace InfraStructure.Services
     {
         private readonly IHttpContextAccessor _httpContext;
         private readonly AppDbContext _db;
+        private readonly IUserRepository _userRepository;
 
-        public CurrentUserService(IHttpContextAccessor httpContext, AppDbContext db)
+        public CurrentUserService(IHttpContextAccessor httpContext, AppDbContext db, IUserRepository userRepository)
         {
             _httpContext = httpContext;
             _db = db;
+            _userRepository = userRepository;
         }
 
         public async Task<Guid> GetUserIdAsync()
@@ -30,7 +33,11 @@ namespace InfraStructure.Services
 
             var user = context.User;
             var oid = user.FindFirst("http://schemas.microsoft.com/identity/claims/objectidentifier")?.Value;
-            var appUser = await _db.Users.FirstOrDefaultAsync(x => x.AzureOid == oid);
+            var appUser = await _userRepository.CreateUserIfNotExists(
+                user.FindFirst(ClaimTypes.Name)?.Value ?? "Unknown",
+                user.FindFirst(ClaimTypes.Email)?.Value ?? "Unknown",
+                oid ?? throw new Exception("Azure OID claim not found.")
+            );
             context.Items["CurrentUser"] = appUser;
             return appUser.Id;
         }

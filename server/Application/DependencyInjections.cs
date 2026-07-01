@@ -1,7 +1,9 @@
 ﻿using Application.Features.Auth.Interfaces;
 using Application.Features.Auth.Services;
-using Application.Features.Expenses.Intefaces;
-using Application.Features.Expenses.Services;
+using Application.Features.Bank.Interfaces;
+using Application.Features.Bank.Services;
+using Application.Features.Transactions.Intefaces;
+using Application.Features.Transactions.Services;
 using Mapster;
 using MapsterMapper;
 using Microsoft.Extensions.DependencyInjection;
@@ -20,8 +22,9 @@ namespace Application
             services.AddScoped<IMapper, ServiceMapper>();
             #endregion
 
-            services.AddScoped<IExpenseService, ExpenseService>();
+            services.AddScoped<ITransactionService, TransactionService>();
             services.AddScoped<IAuthService, AuthService>();
+            services.AddScoped<IBankService, BankService>();
 
             return services;
         }

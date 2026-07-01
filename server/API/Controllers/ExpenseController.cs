@@ -1,6 +1,6 @@
 ﻿using API.Extensions;
-using Application.Features.Expenses.Intefaces;
-using Application.Features.Expenses.Request;
+using Application.Features.Transactions.Intefaces;
+using Application.Features.Transactions.Request;
 using Domain.Enums;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -8,60 +8,53 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
-    [Route("api/expense")]
+    [Route("api/transaction")]
     [ApiController]
     [Authorize]
-    public class ExpenseController : ControllerBase
+    public class TransactionController(
+          ITransactionService _TransactionService
+            ) : ControllerBase
     {
-        private readonly IExpenseService _ExpenseService;
-
-        public ExpenseController(
-              IExpenseService ExpenseService
-            )
-        {
-            _ExpenseService = ExpenseService;
-        }
-
 
         [HttpPost]
-        public async Task<IActionResult> InsertExpense([FromBody] ExpenseDto request)
+        public async Task<IActionResult> InsertTransaction([FromBody] TransactionDto request)
         {
-            var result = await _ExpenseService.Insert(request);
+            var result = await _TransactionService.Insert(request);
             return result.ToActionResult();
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> ModifyExpense([FromBody] ExpenseDto request, Guid id)
+        public async Task<IActionResult> ModifyTransaction([FromBody] TransactionDto request, Guid id)
         {
-            var result =await _ExpenseService.Modify(request, id);
+            var result = await _TransactionService.Modify(request, id);
             return result.ToActionResult();
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteExpense(Guid id)
+        public async Task<IActionResult> DeleteTransaction(Guid id)
         {
-            var result =await _ExpenseService.Delete(id);
+            var result = await _TransactionService.Delete(id);
             return result.ToActionResult();
         }
 
         [HttpPost("dashboard")]
-        public async Task<IActionResult> Dashboard([FromBody] ExpenseDashboardRequest req)
+        public async Task<IActionResult> Dashboard([FromBody] TransactionDashboardRequest req)
         {
-            var result =await _ExpenseService.GetDashboard(req);
+            var result = await _TransactionService.GetDashboard(req);
             return result.ToActionResult();
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetExpenseDisplay(Guid id)
+        public async Task<IActionResult> GetTransactionDisplay(Guid id)
         {
-            var result = await _ExpenseService.GetExpenseForDisplay(id);
+            var result = await _TransactionService.GetTransactionForDisplay(id);
             return result.ToActionResult();
         }
 
         [HttpGet("stats")]
         public async Task<IActionResult> GetDisplayStats([FromQuery] DateTimeOffset? startDate, DateTimeOffset? endDate, CategoryEnum? category)
         {
-            var result = await _ExpenseService.GetExpenseStatsForDisplay(startDate, endDate, category);
+            var result = await _TransactionService.GetTransactionStatsForDisplay(startDate, endDate, category);
             return result.ToActionResult();
         }
     }

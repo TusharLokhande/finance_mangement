@@ -10,9 +10,9 @@
     <Folder Include="Features\Auth\Mappings\" />
     <Folder Include="Features\Auth\Validation\" />
     <Folder Include="Features\Auth\Response\" />
-    <Folder Include="Features\Expenses\Mappings\" />
-    <Folder Include="Features\Expenses\Intefaces\" />
-    <Folder Include="Features\Expenses\Services\" />
+    <Folder Include="Features\Transactions\Mappings\" />
+    <Folder Include="Features\Transactions\Intefaces\" />
+    <Folder Include="Features\Transactions\Services\" />
   </ItemGroup>
 
   <ItemGroup>

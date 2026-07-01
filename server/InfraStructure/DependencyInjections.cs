@@ -34,7 +34,8 @@ namespace InfraStructure
                 opts.UseNpgsql(dataSource));
 
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-            services.AddScoped<IExpenseRepository, ExpenseRepository>();
+            services.AddScoped<ITransactionRepository, TransactionRepository>();
+            services.AddScoped<IBankRepository, BankRepository>();
             services.AddScoped<ITagRepository, TagRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<ICurrentUserService, CurrentUserService>();

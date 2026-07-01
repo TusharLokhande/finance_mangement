@@ -4,26 +4,26 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace InfraStructure.Persistence.Configurations
 {
-    internal class ExpenseTagMappingConfiguration : BaseConfiguration<ExpenseTagMapping>
+    internal class TransactionTagMappingConfiguration : BaseConfiguration<TransactionTagMapping>
     {
-        public override void Configure(EntityTypeBuilder<ExpenseTagMapping> builder)
+        public override void Configure(EntityTypeBuilder<TransactionTagMapping> builder)
         {
             base.Configure(builder);
-            builder.ToTable("ExpenseTagMapping");
+            builder.ToTable("TransactionTagMapping");
 
-            builder.HasKey(k => new { k.TagId, k.ExpenseId });
+            builder.HasKey(k => new { k.TagId, k.TransactionId });
 
             builder.HasIndex(k => k.TagId);
-            builder.HasIndex(k => k.ExpenseId);
+            builder.HasIndex(k => k.TransactionId);
 
             builder.HasOne(etm => etm.Tags)
-                .WithMany(t => t.ExpenseTagMapping)
+                .WithMany(t => t.TransactionTagMapping)
                 .HasForeignKey(etm => etm.TagId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            builder.HasOne(etm => etm.Expense)
-                .WithMany(t => t.ExpenseTagMapping)
-                .HasForeignKey(etm => etm.ExpenseId)
+            builder.HasOne(etm => etm.Transaction)
+                .WithMany(t => t.TransactionsTagMappings)
+                .HasForeignKey(etm => etm.TransactionId)
                 .OnDelete(DeleteBehavior.Cascade);
         }
     }

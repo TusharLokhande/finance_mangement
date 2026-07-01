@@ -1,7 +1,7 @@
 using API.Extensions;
 using API.Middlewares;
 using Application;
-using Application.Features.Expenses.Request;
+using Application.Features.Transactions.Request;
 using FluentValidation;
 using InfraStructure;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -32,14 +32,17 @@ builder.Services.AddControllers(
 );
 
 builder.Services.Scan(scan =>
-    scan.FromAssemblyOf<ExpenseDto>()
+    scan.FromAssemblyOf<TransactionDto>()
     .AddClasses(classes => classes.AssignableTo(typeof(IValidator<>)))
     .AsImplementedInterfaces()
     .WithSingletonLifetime()
 );
 
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
+builder.Services.AddOpenApi(options =>
+{
+    options.AddDocumentTransformer<OAuthSecuritySchemeTransformer>();
+});
 
 builder.Services.AddHealthChecks()
     .AddNpgSql(
@@ -59,6 +62,14 @@ if (app.Environment.IsDevelopment())
     {
         options.Title = "My API";
         options.Theme = ScalarTheme.Kepler;
+
+        options
+        .AddPreferredSecuritySchemes("OAuth2")
+        .AddAuthorizationCodeFlow("OAuth2", flow =>
+        {
+            flow.ClientId = builder.Configuration["AzureAd:ClientId"]!;
+            flow.SelectedScopes = [$"api://{builder.Configuration["AzureAd:ClientId"]}/access_as_user"];
+        });
     });
 }
 app.UseCors("DefaultCorsPolicy");
