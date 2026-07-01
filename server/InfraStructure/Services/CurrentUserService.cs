@@ -34,7 +34,7 @@ namespace InfraStructure.Services
             var user = context.User;
             var oid = user.FindFirst("http://schemas.microsoft.com/identity/claims/objectidentifier")?.Value;
             var appUser = await _userRepository.CreateUserIfNotExists(
-                user.FindFirst(ClaimTypes.Name)?.Value ?? "Unknown",
+                user.FindFirst("name")?.Value ?? "Unknown",
                 user.FindFirst(ClaimTypes.Email)?.Value ?? "Unknown",
                 oid ?? throw new Exception("Azure OID claim not found.")
             );
